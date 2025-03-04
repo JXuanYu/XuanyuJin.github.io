@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Two-stage multi-modal multi-objective algorithm based on dynamic niche updating"
+date:   2025-03-01 08:45:00 +00:00
+image: /images/DNTE.jpg
+categories: research
+authors: "Haonian Ji, Hongmei Chen, and Yong Mi"
+venue: "under review"
+arxiv: 
+code: 
+website: 
+---
+In solving multimodal multiobjective optimization problems (MMOPs), changes in objective and decision space need to be considered. However, many multimodal multiobjective evolutionary algorithms (MMOEAs) tend to prioritize diversity in the objective space during the optimization process, often leading to suboptimal diversity and distribution in the decision space. This study proposes the Dynamic-Niche-Based Two-Stage Evolution (DNTE) approach to address this issue. DNTE employs differential evolutionary strategies in two stages, utilizing dynamic niche to enhance solution viability and optimize decision space distribution at different phases. In the first stage, dynamic niche is used to restrict the dominance range of Pareto domination. In contrast, in the second stage, it is integrated with differential evolution to refine the distribution of the decision space. The combination of DNTE with DN-NSGA-II enhances the capability of solving MMOPs and demonstrates superior performance compared to other evolutionary algorithms on MMF and MMMOP benchmark functions
