@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>纪浩年</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="纪浩年" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>
+                纪浩年
+              </h1>
+              <p>我是西南交通大学计算机与人工智能学院人工智能专业的一名本科生。我的导师是<a href="https://scai.swjtu.edu.cn/">陈红梅教授</a>。
+              </p>
+              <p>
+                从2022年到2025年，我在西南交通大学计算机与人工智能学院学习。我正在进行关于<strong>进化算法</strong>的研究，并且目前有一篇论文正在审稿中。
+                作为团队负责人，我参加了由北京大学<a href="https://www.psy.pku.edu.cn/szdw/qzjy/fjs/mxz/index.htm">孟祥志教授</a>和西南交通大学<a href="https://faculty.swjtu.edu.cn/chujielei/zh_CN/index.htm/">储杰磊教授</a>指导的<strong>2024年全国大学生创新创业训练计划</strong>。
+                我们的项目名为<a href="http://jwc.swjtu.edu.cn/download/ueditor/jsp/upload/file/20241209/1733726320827017223.xlsx"><em>基于大模型的阅读能力评估及早期读写障碍筛查</em></a>，被评为国家级项目，并已申请相关专利（正在审查中）。
+              </p>
+              
+              <p>
+                在2024-2025期间，我在<a href="https://www.huaxiuyao.io/aiming-lab/">北卡罗来纳大学教堂山分校AIMING实验室</a>进行远程研究实习，师从<a href="https://www.huaxiuyao.io/">姚华秀教授</a>，专注于<strong>AI对齐</strong>。我参与了多个项目，其中两篇合著论文（<a href="https://aiming-lab.github.io/MJ-VIDEO.github.io/"><em>MJ-Video</em></a> 和 <em>GLIMPSE</em>）正在审稿中。
+              </p>
+              
+              <p>
+                此前，在大二期间，我在智能驾驶公司CIDI实习，在芝加哥大学<a href="https://billchan226.github.io/">陈兆润博士</a>的指导下研究大型模型在自动驾驶中的作用。
+              </p>
+              <p style="text-align:center">
+                <a target="_blank" href="2022111346@my.swjtu.edu.cn">邮箱</a> &nbsp;/&nbsp;
+                <a href="https://github.com/HaonianJi">GitHub</a> &nbsp;/&nbsp;
+                <a href="https://openreview.net/profile?id=~Haonian_Ji1">OpenReview</a> &nbsp;/&nbsp;
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%" alt="个人照片" src="images/circle_bw_crop.jpg">
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>研究</h2>
+              <p>
+                我对AI对齐、优化和机器学习感兴趣。
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% assign sorted_posts = site.posts | sort: 'date' %}
+          {% for post in sorted_posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="项目图片" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
+
+              <br>
+              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <br>
+              {% if post.arxiv %}
+              <a href="{{post.arxiv}}">arxiv</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">视频</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">代码</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">海报</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">幻灯片</a> /
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">网站</a> /
+              {% endif %}
+              {% if post.youtube %}
+              <a href="{{post.youtube}}">YouTube</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2></h2>
+              <p>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% assign sorted_posts = site.posts | sort: 'date' %}
+          {% for post in sorted_posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'Intel' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="项目图片" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.categories}} {{post.course}}</em>
+              <br>
+              {{ post.date | date: "%Y-%m-%d" }}
+
+              <br>
+              {% if post.website %}
+              <a href="{{post.website}}">网站</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">论文</a> /
+              {% endif %}
+              {% if post.patent %}
+              <a href="{{post.patent}}">专利</a> /
+              {% endif %}
+              {% if post.patent2 %}
+              <a href="{{post.patent2}}">专利 #2</a> /
+              {% endif %}
+              {% if post.patent3 %}
+              <a href="{{post.patent3}}">专利 #3</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">视频</a> /
+              {% endif %}
+              {% if post.video2 %}
+              <a href="{{post.video2}}">视频 #2</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">代码</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">海报</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">幻灯片</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2></h2>
+              <p> 
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% assign sorted_posts = site.posts | sort: 'date' %}
+          {% for post in sorted_posts %}
+          {% for cat in post.categories %}
+          {% if cat != 'research' and cat != 'Intel' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="项目图片" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.categories}} {{post.course}}</em>
+              <br>
+              {{ post.date | date: "%Y-%m-%d" }}
+
+              <br>
+              {% if post.website %}
+              <a href="{{post.website}}">网站</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">论文</a> /
+              {% endif %}
+              {% if post.patent %}
+              <a href="{{post.patent}}">专利</a> /
+              {% endif %}
+              {% if post.patent2 %}
+              <a href="{{post.patent2}}">专利 #2</a> /
+              {% endif %}
+              {% if post.patent3 %}
+              <a href="{{post.patent3}}">专利 #3</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">视频</a> /
+              {% endif %}
+              {% if post.video2 %}
+              <a href="{{post.video2}}">视频 #2</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">代码</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">海报</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">幻灯片</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+                设计和源代码来自<a style="font-size:small;" href="https://jonbarron.info">Jon Barron 的网站</a> 和 <a style="font-size:small;" href="https://github.com/leonidk/leonidk.github.io">leonidk 的网站</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
